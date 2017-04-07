@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{691BBBC3-0081-42E1-B1A3-DCE73FCE6734}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kalkulator</RootNamespace>
+    <AssemblyName>iCalculator</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\iric__000\Desktop\clca\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>http://www.igoriric.com</SupportUrl>
+    <ProductName>iCalkulator</ProductName>
+    <PublisherName>Iric Software</PublisherName>
+    <WebPage>www.igoriric.com</WebPage>
+    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1D835EDFBCBD853E844E2EE8D09D4C3DA53A4F8D</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Kalkulator_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1376930060_171414.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Mvvm, Version=16.1.0.0, Culture=neutral, PublicKeyToken=382ad28f6ae31f30, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpressMvvm.16.1.4.0\lib\net40-client\DevExpress.Mvvm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.UI, Version=16.1.0.0, Culture=neutral, PublicKeyToken=382ad28f6ae31f30, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpressMvvm.16.1.4.0\lib\net40-client\DevExpress.Mvvm.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v13.1">
+      <HintPath>..\packages\DevExpressMvvm.16.1.4.0\lib\net40-client\DevExpress.Utils.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v13.1.UI">
+      <HintPath>..\packages\DevExpressMvvm.16.1.4.0\lib\net40-client\DevExpress.Utils.v13.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v13.1">
+      <HintPath>..\packages\DevExpressMvvm.16.1.4.0\lib\net40-client\DevExpress.XtraEditors.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="NCalc, Version=3.5.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CoreCLR-NCalc.2.1.2\lib\net45\NCalc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnalitycG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalitycG.Designer.cs">
+      <DependentUpon>AnalitycG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="area.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="area.Designer.cs">
+      <DependentUpon>area.cs</DependentUpon>
+    </Compile>
+    <Compile Include="basicfrms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="basicfrms.Designer.cs">
+      <DependentUpon>basicfrms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalculateInterest.cs" />
+    <Compile Include="data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="data.Designer.cs">
+      <DependentUpon>data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DifEq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DifEq.Designer.cs">
+      <DependentUpon>DifEq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiferentialC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiferentialC.Designer.cs">
+      <DependentUpon>DiferentialC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Distance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Distance.Designer.cs">
+      <DependentUpon>Distance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="distancef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="distancef.Designer.cs">
+      <DependentUpon>distancef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="energy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="energy.Designer.cs">
+      <DependentUpon>energy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="financ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="financ.Designer.cs">
+      <DependentUpon>financ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="force.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="force.Designer.cs">
+      <DependentUpon>force.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formula.Designer.cs">
+      <DependentUpon>formula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsareas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsareas.Designer.cs">
+      <DependentUpon>frmsareas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fuel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fuel.Designer.cs">
+      <DependentUpon>fuel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IntegralC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntegralC.Designer.cs">
+      <DependentUpon>IntegralC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="konv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="konv.Designer.cs">
+      <DependentUpon>konv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mass.Designer.cs">
+      <DependentUpon>mass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parser.cs" />
+    <Compile Include="power.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="power.Designer.cs">
+      <DependentUpon>power.cs</DependentUpon>
+    </Compile>
+    <Compile Include="preasure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="preasure.Designer.cs">
+      <DependentUpon>preasure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Probability.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Probability.Designer.cs">
+      <DependentUpon>Probability.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="pythagora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pythagora.Designer.cs">
+      <DependentUpon>pythagora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Series.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Series.Designer.cs">
+      <DependentUpon>Series.cs</DependentUpon>
+    </Compile>
+    <Compile Include="speed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="speed.Designer.cs">
+      <DependentUpon>speed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen1.Designer.cs">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="temperature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="temperature.Designer.cs">
+      <DependentUpon>temperature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="time.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="time.Designer.cs">
+      <DependentUpon>time.cs</DependentUpon>
+    </Compile>
+    <Compile Include="trigonometry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="trigonometry.Designer.cs">
+      <DependentUpon>trigonometry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vectors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vectors.Designer.cs">
+      <DependentUpon>Vectors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="volume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="volume.Designer.cs">
+      <DependentUpon>volume.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AnalitycG.resx">
+      <DependentUpon>AnalitycG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="area.resx">
+      <DependentUpon>area.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="basicfrms.resx">
+      <DependentUpon>basicfrms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data.resx">
+      <DependentUpon>data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DifEq.resx">
+      <DependentUpon>DifEq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiferentialC.resx">
+      <DependentUpon>DiferentialC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Distance.resx">
+      <DependentUpon>Distance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="distancef.resx">
+      <DependentUpon>distancef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="energy.resx">
+      <DependentUpon>energy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="financ.resx">
+      <DependentUpon>financ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="force.resx">
+      <DependentUpon>force.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formula.resx">
+      <DependentUpon>formula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsareas.resx">
+      <DependentUpon>frmsareas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fuel.resx">
+      <DependentUpon>fuel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntegralC.resx">
+      <DependentUpon>IntegralC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="konv.resx">
+      <DependentUpon>konv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mass.resx">
+      <DependentUpon>mass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="power.resx">
+      <DependentUpon>power.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="preasure.resx">
+      <DependentUpon>preasure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Probability.resx">
+      <DependentUpon>Probability.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="pythagora.resx">
+      <DependentUpon>pythagora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Series.resx">
+      <DependentUpon>Series.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="speed.resx">
+      <DependentUpon>speed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="temperature.resx">
+      <DependentUpon>temperature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="time.resx">
+      <DependentUpon>time.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trigonometry.resx">
+      <DependentUpon>trigonometry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vectors.resx">
+      <DependentUpon>Vectors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="volume.resx">
+      <DependentUpon>volume.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Kalkulator_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\butt2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Areas.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\distance.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\04PythagoreanTheorem_e_0130.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="DevExpress.Data.v13.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Printing.v13.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Sparkline.v13.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Utils.v13.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraBars.v13.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraEditors.v13.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1376930060_171414.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
