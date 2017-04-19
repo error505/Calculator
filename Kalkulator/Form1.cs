@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using NCalc;
 using System.IO;
+using Kalkulator.Properties;
 
 namespace Kalkulator
 {
@@ -258,14 +260,18 @@ namespace Kalkulator
             }
         }
 
-        private void button21_Click(object sender, EventArgs e)
+        private void Square(object sender, EventArgs e)
         {
-            textBox1.Text = Convert.ToString((Convert.ToDecimal(textBox1.Text) * Convert.ToDecimal(textBox1.Text)));
+            textBox1.Text = textBox1.Text == ""
+                ? Resources.Calculator_button21_Click_To_calculate_square_you_must_provide_number_
+                : Convert.ToString((Convert.ToDecimal(textBox1.Text) * Convert.ToDecimal(textBox1.Text)),
+                    CultureInfo.InvariantCulture);
         }
 
         private void button22_Click(object sender, EventArgs e)
         {
-            textBox1.Text = Convert.ToString(((Convert.ToDecimal(textBox1.Text) * Convert.ToDecimal(textBox1.Text) * Convert.ToDecimal(textBox1.Text))));
+            
+            textBox1.Text = Convert.ToString(((Convert.ToDecimal(textBox1.Text) * Convert.ToDecimal(textBox1.Text) * Convert.ToDecimal(textBox1.Text))), CultureInfo.InvariantCulture);
         }
 
         private void button23_Click(object sender, EventArgs e)

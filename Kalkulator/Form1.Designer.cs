@@ -173,7 +173,7 @@
             this.button21.TabIndex = 22;
             this.button21.Text = "x2";
             this.button21.UseVisualStyleBackColor = false;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
+            this.button21.Click += new System.EventHandler(this.Square);
             // 
             // button22
             // 
