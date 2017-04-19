@@ -12,7 +12,7 @@ namespace Kalkulator
 {
     public partial class time : Form
     {
-        public konv frm2;
+        public Konv frm2;
         //string min4 = "x10^-4";
         string min5 = "x10^-5";
         string min8 = "x10^-8";

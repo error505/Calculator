@@ -12,7 +12,7 @@ namespace Kalkulator
 {
     public partial class temperature : Form
     {
-        public konv frm2;
+        public Konv frm2;
         public temperature()
         {
             InitializeComponent();

@@ -379,7 +379,7 @@
             this.button60.TabIndex = 46;
             this.button60.Text = "GRAD";
             this.button60.UseVisualStyleBackColor = false;
-            this.button60.Click += new System.EventHandler(this.button60_Click);
+            this.button60.Click += new System.EventHandler(this.ButtonGrad);
             // 
             // button59
             // 
@@ -393,7 +393,7 @@
             this.button59.TabIndex = 45;
             this.button59.Text = "DEG";
             this.button59.UseVisualStyleBackColor = false;
-            this.button59.Click += new System.EventHandler(this.button59_Click);
+            this.button59.Click += new System.EventHandler(this.ButtonDeg);
             // 
             // button58
             // 
@@ -407,7 +407,7 @@
             this.button58.TabIndex = 44;
             this.button58.Text = "RAD";
             this.button58.UseVisualStyleBackColor = false;
-            this.button58.Click += new System.EventHandler(this.button58_Click);
+            this.button58.Click += new System.EventHandler(this.buttonRAD);
             // 
             // button55
             // 

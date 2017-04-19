@@ -480,8 +480,8 @@ namespace Kalkulator
 
         private void button42_Click(object sender, EventArgs e)
         {
-            konv frm2 = new konv();
-            frm2.frm1 = this;
+            Konv frm2 = new Konv();
+            frm2.Frm1 = this;
             frm2.ShowDialog();
         }
 
@@ -517,7 +517,7 @@ namespace Kalkulator
             InputBox.Text = InputBox.Text + "sign";
         }
         
-        private void button58_Click(object sender, EventArgs e)
+        private void buttonRAD(object sender, EventArgs e)
         {
             p.Mode = MathParser.Mode.RAD;
             label1.Text = "RAD";
@@ -547,13 +547,13 @@ namespace Kalkulator
 
         }
 
-        private void button59_Click(object sender, EventArgs e)
+        private void ButtonDeg(object sender, EventArgs e)
         {
             p.Mode = MathParser.Mode.DEG;
             label1.Text = "DEG";
         }
 
-        private void button60_Click(object sender, EventArgs e)
+        private void ButtonGrad(object sender, EventArgs e)
         {
             p.Mode = MathParser.Mode.GRAD;
             label1.Text = "GRAD";

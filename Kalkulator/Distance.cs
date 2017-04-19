@@ -1,35 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace Kalkulator
 {
     public partial class Distance : Form
     {
-        public konv frm2;
-        string min4 = "x10^-4";
-        string min5 = "x10^-5";
-        string min8 = "x10^-8";
-        string min6 = "x10^-6";
-        string min7 = "x10^-7";
-        string min9 = "x10^-9";
+        public Konv frm2;
+        private const string Min4 = "x10^-4";
+        private const string Min5 = "x10^-5";
+        private const string Min8 = "x10^-8";
+        private const string Min6 = "x10^-6";
+        private const string Min7 = "x10^-7";
+        private const string Min9 = "x10^-9";
         //string min10 = "x10^-10";
-        string min12 = "x10^-12";
-        string min13 = "x10^-13";
-        string min14 = "x10^-14";
-        string min15 = "x10^-15";
-        string min16 = "x10^-16";
-        string min17 = "x10^-17";
-        string min18 = "x10^-18";
-        string min19 = "x10^-19";
-        string min20 = "x10^-20";
-        string min21 = "x10^-21";
+        private const string Min12 = "x10^-12";
+        private const string Min13 = "x10^-13";
+        private const string Min14 = "x10^-14";
+        private const string Min15 = "x10^-15";
+        private const string Min16 = "x10^-16";
+        private const string Min17 = "x10^-17";
+        private const string Min18 = "x10^-18";
+        private const string Min19 = "x10^-19";
+        private const string Min20 = "x10^-20";
+        private const string Min21 = "x10^-21";
         //string min22 = "x10^-22";
         public Distance()
         {
@@ -43,16 +37,14 @@ namespace Kalkulator
 
         private void button15_Click(object sender, EventArgs e)
         {
-
-
             textBox1.Text = frm2.textBox1.Text;
 
             if (label1.Text == "μm")
             {
                 textBox2.Text = Convert.ToString(Convert.ToDouble(textBox1.Text) * 0.001);
-                textBox3.Text = Convert.ToString(Convert.ToDouble(textBox1.Text) * 1 + min4);
-                textBox4.Text = Convert.ToString(Convert.ToDouble(textBox1.Text) * 1 + min6);
-                textBox5.Text = Convert.ToString(Convert.ToDouble(textBox1.Text) * 1 + min9);
+                textBox3.Text = Convert.ToString(Convert.ToDouble(textBox1.Text) * 1 + Min4);
+                textBox4.Text = Convert.ToString(Convert.ToDouble(textBox1.Text) * 1 + Min6);
+                textBox5.Text = Convert.ToString(Convert.ToDouble(textBox1.Text) * 1 + Min9);
                 textBox6.Text = Convert.ToString(Convert.ToDouble(textBox1.Text) * 0.039370079);
                 textBox7.Text = Convert.ToString(Convert.ToDouble(textBox1.Text) * 3.937007874);
                 textBox8.Text = Convert.ToString(Convert.ToDouble(textBox1.Text) * 3.280839895);
@@ -81,12 +73,12 @@ namespace Kalkulator
                 textBox7.Text = Convert.ToString(Convert.ToDouble(textBox2.Text) * 0.039370079);
                 textBox8.Text = Convert.ToString(Convert.ToDouble(textBox2.Text) * 0.00328084);
                 textBox9.Text = Convert.ToString(Convert.ToDouble(textBox2.Text) * 0.001093613);
-                textBox10.Text = Convert.ToString(Convert.ToDouble(textBox2.Text) * 6.213711922 + min7);
-                textBox11.Text = Convert.ToString(Convert.ToDouble(textBox2.Text) * 5.399568035 + min7);
+                textBox10.Text = Convert.ToString(Convert.ToDouble(textBox2.Text) * 6.213711922 + Min7);
+                textBox11.Text = Convert.ToString(Convert.ToDouble(textBox2.Text) * 5.399568035 + Min7);
                 textBox12.Text = Convert.ToString(Convert.ToDouble(textBox2.Text) * 0.000546807);
-                textBox13.Text = Convert.ToString(Convert.ToDouble(textBox2.Text) * 4.970969538 + min5);
-                textBox14.Text = Convert.ToString(Convert.ToDouble(textBox2.Text) * 4.970969538 + min6);
-                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox2.Text) * 1.057000834 + min19);
+                textBox13.Text = Convert.ToString(Convert.ToDouble(textBox2.Text) * 4.970969538 + Min5);
+                textBox14.Text = Convert.ToString(Convert.ToDouble(textBox2.Text) * 4.970969538 + Min6);
+                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox2.Text) * 1.057000834 + Min19);
             }
         }
 
@@ -99,17 +91,17 @@ namespace Kalkulator
                 textBox1.Text = Convert.ToString(Convert.ToDouble(textBox3.Text) * 10000);
                 textBox2.Text = Convert.ToString(Convert.ToDouble(textBox3.Text) * 10);
                 textBox4.Text = Convert.ToString(Convert.ToDouble(textBox3.Text) * 0.01);
-                textBox5.Text = Convert.ToString(Convert.ToDouble(textBox3.Text) * 1 + min5);
+                textBox5.Text = Convert.ToString(Convert.ToDouble(textBox3.Text) * 1 + Min5);
                 textBox6.Text = Convert.ToString(Convert.ToDouble(textBox3.Text) * 393.7007874);
                 textBox7.Text = Convert.ToString(Convert.ToDouble(textBox3.Text) * 0.393700787);
                 textBox8.Text = Convert.ToString(Convert.ToDouble(textBox3.Text) * 0.032808399);
                 textBox9.Text = Convert.ToString(Convert.ToDouble(textBox3.Text) * 0.010936133);
-                textBox10.Text = Convert.ToString(Convert.ToDouble(textBox3.Text) * 6.213711922 + min6);
-                textBox11.Text = Convert.ToString(Convert.ToDouble(textBox3.Text) * 5.399568035 + min6);
+                textBox10.Text = Convert.ToString(Convert.ToDouble(textBox3.Text) * 6.213711922 + Min6);
+                textBox11.Text = Convert.ToString(Convert.ToDouble(textBox3.Text) * 5.399568035 + Min6);
                 textBox12.Text = Convert.ToString(Convert.ToDouble(textBox3.Text) * 0.005468066);
                 textBox13.Text = Convert.ToString(Convert.ToDouble(textBox3.Text) * 0.000497097);
-                textBox14.Text = Convert.ToString(Convert.ToDouble(textBox3.Text) * 4.970969538 + min5);
-                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox3.Text) * 1.057000834 + min18);
+                textBox14.Text = Convert.ToString(Convert.ToDouble(textBox3.Text) * 4.970969538 + Min5);
+                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox3.Text) * 1.057000834 + Min18);
 
             }
         }
@@ -133,7 +125,7 @@ namespace Kalkulator
                 textBox12.Text = Convert.ToString(Convert.ToDouble(textBox4.Text) * 0.546806649);
                 textBox13.Text = Convert.ToString(Convert.ToDouble(textBox4.Text) * 0.049709695);
                 textBox14.Text = Convert.ToString(Convert.ToDouble(textBox4.Text) * 0.00497097);
-                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox4.Text) * 1.057000834 + min16);
+                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox4.Text) * 1.057000834 + Min16);
 
             }
         }
@@ -157,7 +149,7 @@ namespace Kalkulator
                 textBox12.Text = Convert.ToString(Convert.ToDouble(textBox5.Text) * 546.8066492);
                 textBox13.Text = Convert.ToString(Convert.ToDouble(textBox5.Text) * 49.70969538);
                 textBox14.Text = Convert.ToString(Convert.ToDouble(textBox5.Text) * 4.970969538);
-                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox5.Text) * 1.057000834 + min13);
+                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox5.Text) * 1.057000834 + Min13);
 
             }
         }
@@ -171,17 +163,17 @@ namespace Kalkulator
                 textBox1.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) * 25.4);
                 textBox2.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) * 0.0254);
                 textBox3.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) * 0.00254);
-                textBox4.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) * 2.54 + min5);
-                textBox5.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) * 2.54 + min8);
+                textBox4.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) * 2.54 + Min5);
+                textBox5.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) * 2.54 + Min8);
                 textBox7.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) * 0.001);
-                textBox8.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) * 8.333333333 + min5);
-                textBox9.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) * 2.777777778 + min5);
-                textBox10.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) * 1.578282828 + min8);
-                textBox11.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) * 1.371490281 + min8);
-                textBox12.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) * 1.388888889 + min5);
-                textBox13.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) * 1.262626263 + min6);
-                textBox14.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) * 1.262626263 + min7);
-                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) * 2.684782118 + min21);
+                textBox8.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) * 8.333333333 + Min5);
+                textBox9.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) * 2.777777778 + Min5);
+                textBox10.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) * 1.578282828 + Min8);
+                textBox11.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) * 1.371490281 + Min8);
+                textBox12.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) * 1.388888889 + Min5);
+                textBox13.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) * 1.262626263 + Min6);
+                textBox14.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) * 1.262626263 + Min7);
+                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) * 2.684782118 + Min21);
                 
             }
         }
@@ -196,16 +188,16 @@ namespace Kalkulator
                 textBox2.Text = Convert.ToString(Convert.ToDouble(textBox7.Text) * 25.4);
                 textBox3.Text = Convert.ToString(Convert.ToDouble(textBox7.Text) * 2.54);
                 textBox4.Text = Convert.ToString(Convert.ToDouble(textBox7.Text) * 0.0254);
-                textBox5.Text = Convert.ToString(Convert.ToDouble(textBox7.Text) * 2.54 + min5);
+                textBox5.Text = Convert.ToString(Convert.ToDouble(textBox7.Text) * 2.54 + Min5);
                 textBox6.Text = Convert.ToString(Convert.ToDouble(textBox7.Text) * 1000);
                 textBox8.Text = Convert.ToString(Convert.ToDouble(textBox7.Text) * 0.08333333333);
                 textBox9.Text = Convert.ToString(Convert.ToDouble(textBox7.Text) * 0.02777777778);
-                textBox10.Text = Convert.ToString(Convert.ToDouble(textBox7.Text) * 1.578282828 + min5);
-                textBox11.Text = Convert.ToString(Convert.ToDouble(textBox7.Text) * 1.371490281 + min5);
+                textBox10.Text = Convert.ToString(Convert.ToDouble(textBox7.Text) * 1.578282828 + Min5);
+                textBox11.Text = Convert.ToString(Convert.ToDouble(textBox7.Text) * 1.371490281 + Min5);
                 textBox12.Text = Convert.ToString(Convert.ToDouble(textBox7.Text) * 0.013888889);
                 textBox13.Text = Convert.ToString(Convert.ToDouble(textBox7.Text) * 0.001262626);
                 textBox14.Text = Convert.ToString(Convert.ToDouble(textBox7.Text) * 0.000126263);
-                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox7.Text) * 2.684782118 + min18);
+                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox7.Text) * 2.684782118 + Min18);
 
             }
         }
@@ -229,7 +221,7 @@ namespace Kalkulator
                 textBox12.Text = Convert.ToString(Convert.ToDouble(textBox8.Text) * 0.166666667);
                 textBox13.Text = Convert.ToString(Convert.ToDouble(textBox8.Text) * 0.015151515);
                 textBox14.Text = Convert.ToString(Convert.ToDouble(textBox8.Text) * 0.001515152);
-                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox8.Text) * 3.221738542 + min17);
+                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox8.Text) * 3.221738542 + Min17);
 
             }
         }
@@ -253,7 +245,7 @@ namespace Kalkulator
                 textBox12.Text = Convert.ToString(Convert.ToDouble(textBox9.Text) * 0.5);
                 textBox13.Text = Convert.ToString(Convert.ToDouble(textBox9.Text) * 0.045454545);
                 textBox14.Text = Convert.ToString(Convert.ToDouble(textBox9.Text) * 0.004545455);
-                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox9.Text) * 9.665215626 + min17);
+                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox9.Text) * 9.665215626 + Min17);
             }
         }
 
@@ -276,7 +268,7 @@ namespace Kalkulator
                 textBox12.Text = Convert.ToString(Convert.ToDouble(textBox10.Text) * 880);
                 textBox13.Text = Convert.ToString(Convert.ToDouble(textBox10.Text) * 80);
                 textBox14.Text = Convert.ToString(Convert.ToDouble(textBox10.Text) * 8);
-                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox10.Text) * 1.70107795 + min13);
+                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox10.Text) * 1.70107795 + Min13);
             }
         }
 
@@ -299,7 +291,7 @@ namespace Kalkulator
                 textBox12.Text = Convert.ToString(Convert.ToDouble(textBox11.Text) * 1012.685914);
                 textBox13.Text = Convert.ToString(Convert.ToDouble(textBox11.Text) * 92.06235584);
                 textBox14.Text = Convert.ToString(Convert.ToDouble(textBox11.Text) * 9.206235584);
-                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox11.Text) * 1.957565545 + min13);
+                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox11.Text) * 1.957565545 + Min13);
             }
         }
 
@@ -322,7 +314,7 @@ namespace Kalkulator
                 textBox11.Text = Convert.ToString(Convert.ToDouble(textBox12.Text) * 0.000987473);
                 textBox13.Text = Convert.ToString(Convert.ToDouble(textBox12.Text) * 0.090909091);
                 textBox14.Text = Convert.ToString(Convert.ToDouble(textBox12.Text) * 0.009090909);
-                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox12.Text) * 1.933043125 + min16);
+                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox12.Text) * 1.933043125 + Min16);
             }
         }
 
@@ -345,7 +337,7 @@ namespace Kalkulator
                 textBox11.Text = Convert.ToString(Convert.ToDouble(textBox13.Text) * 0.010862203);
                 textBox12.Text = Convert.ToString(Convert.ToDouble(textBox13.Text) * 11);
                 textBox14.Text = Convert.ToString(Convert.ToDouble(textBox13.Text) * 0.1);
-                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox13.Text) * 2.126347438 + min15);
+                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox13.Text) * 2.126347438 + Min15);
             }
         }
 
@@ -355,20 +347,20 @@ namespace Kalkulator
 
             if (label15.Text == "fur")
             {
-                textBox1.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 201168000);
-                textBox2.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 201168);
-                textBox3.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 20116.8);
-                textBox4.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 201.168);
-                textBox5.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 0.201168);
-                textBox6.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 7920000);
-                textBox7.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 7920);
-                textBox8.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 660);
-                textBox9.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 220);
-                textBox10.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 0.125);
-                textBox11.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 0.10862203);
-                textBox12.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 110);
-                textBox13.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 10);
-                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 2.126347438 + min14);
+                textBox1.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 201168000, CultureInfo.InvariantCulture);
+                textBox2.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 201168, CultureInfo.InvariantCulture);
+                textBox3.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 20116.8, CultureInfo.InvariantCulture);
+                textBox4.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 201.168, CultureInfo.InvariantCulture);
+                textBox5.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 0.201168, CultureInfo.InvariantCulture);
+                textBox6.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 7920000, CultureInfo.InvariantCulture);
+                textBox7.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 7920, CultureInfo.InvariantCulture);
+                textBox8.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 660, CultureInfo.InvariantCulture);
+                textBox9.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 220, CultureInfo.InvariantCulture);
+                textBox10.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 0.125, CultureInfo.InvariantCulture);
+                textBox11.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 0.10862203, CultureInfo.InvariantCulture);
+                textBox12.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 110, CultureInfo.InvariantCulture);
+                textBox13.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 10, CultureInfo.InvariantCulture);
+                textBox15.Text = Convert.ToString(Convert.ToDouble(textBox14.Text) * 2.126347438 + Min14);
             }
         }
 
@@ -378,20 +370,20 @@ namespace Kalkulator
 
             if (label16.Text == "ly")
             {
-                textBox1.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 9.460730473 + min21);
-                textBox2.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 9.460730473 + min18);
-                textBox3.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 9.460730473 + min17);
-                textBox4.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 9.460730473 + min15);
-                textBox5.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 9.460730473 + min12);
-                textBox6.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 3.724697036 + min20);
-                textBox7.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 3.724697036 + min17);
-                textBox8.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 3.103914197 + min16);
-                textBox9.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 1.034638066 + min16);
-                textBox10.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 5.878625373 + min12);
-                textBox11.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 5.108385784 + min12);
-                textBox12.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 5.173190328 + min15);
-                textBox13.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 4.702900299 + min14);
-                textBox14.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 4.702900299 + min13);
+                textBox1.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 9.460730473 + Min21);
+                textBox2.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 9.460730473 + Min18);
+                textBox3.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 9.460730473 + Min17);
+                textBox4.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 9.460730473 + Min15);
+                textBox5.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 9.460730473 + Min12);
+                textBox6.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 3.724697036 + Min20);
+                textBox7.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 3.724697036 + Min17);
+                textBox8.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 3.103914197 + Min16);
+                textBox9.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 1.034638066 + Min16);
+                textBox10.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 5.878625373 + Min12);
+                textBox11.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 5.108385784 + Min12);
+                textBox12.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 5.173190328 + Min15);
+                textBox13.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 4.702900299 + Min14);
+                textBox14.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * 4.702900299 + Min13);
             }
         }
 

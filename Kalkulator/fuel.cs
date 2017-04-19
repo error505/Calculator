@@ -12,7 +12,7 @@ namespace Kalkulator
 {
     public partial class fuel : Form
     {
-        public konv frm2;
+        public Konv frm2;
         public fuel()
         {
             InitializeComponent();
