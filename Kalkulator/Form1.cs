@@ -38,88 +38,88 @@ namespace Kalkulator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + '0';
+            InputBox.Text = InputBox.Text + '0';
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + '1';
+            InputBox.Text = InputBox.Text + '1';
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + '2';
+            InputBox.Text = InputBox.Text + '2';
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + '3';
+            InputBox.Text = InputBox.Text + '3';
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + '4';
+            InputBox.Text = InputBox.Text + '4';
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + '5';
+            InputBox.Text = InputBox.Text + '5';
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + '6';
+            InputBox.Text = InputBox.Text + '6';
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + '7';
+            InputBox.Text = InputBox.Text + '7';
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + '8';
+            InputBox.Text = InputBox.Text + '8';
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + '9';
+            InputBox.Text = InputBox.Text + '9';
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + '.';
+            InputBox.Text = InputBox.Text + '.';
             button2.Enabled = true;
         }
 
         private void button18_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
+            InputBox.Text = "";
             label1.Text = "";
             button18.Enabled = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + '+';
+            InputBox.Text = InputBox.Text + '+';
             button3.Enabled = true;
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + '-';
+            InputBox.Text = InputBox.Text + '-';
             button8.Enabled = true;
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + '*';
+            InputBox.Text = InputBox.Text + '*';
             button12.Enabled = true;
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + '/';
+            InputBox.Text = InputBox.Text + '/';
             button16.Enabled = true;
         }
 
@@ -127,9 +127,9 @@ namespace Kalkulator
         private void button4_Click(object sender, EventArgs e)
         {
             {
-                if (p.Evaluate(textBox1.Text))
+                if (p.Evaluate(InputBox.Text))
                     Convert.ToDouble(p.Result);
-                textBox1.Text = p.Result.ToString();
+                InputBox.Text = p.Result.ToString();
             }
             //if (label1.Text == "+")
             //{
@@ -221,7 +221,7 @@ namespace Kalkulator
         private void button17_Click(object sender, EventArgs e)
         {
             //Faktorijel
-            textBox1.Text = textBox1.Text + "!";
+            InputBox.Text = InputBox.Text + "!";
             //int n, s = 1;
             //n = Convert.ToInt32(textBox1.Text);
             //if (n == 0)
@@ -243,40 +243,40 @@ namespace Kalkulator
 
         }
 
-        private void button19_Click(object sender, EventArgs e)
+        private void RootNumber(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + "sqrt";
+            InputBox.Text = InputBox.Text + "sqrt";
         }
 
         private void button20_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Contains("-"))
+            if (InputBox.Text.Contains("-"))
             {
-                textBox1.Text = textBox1.Text.Remove(0, 1);
+                InputBox.Text = InputBox.Text.Remove(0, 1);
             }
             else
             {
-                textBox1.Text = "-" + textBox1.Text;
+                InputBox.Text = "-" + InputBox.Text;
             }
         }
 
         private void Square(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text == ""
+            InputBox.Text = InputBox.Text == ""
                 ? Resources.Calculator_button21_Click_To_calculate_square_you_must_provide_number_
-                : Convert.ToString((Convert.ToDecimal(textBox1.Text) * Convert.ToDecimal(textBox1.Text)),
+                : Convert.ToString((Convert.ToDecimal(InputBox.Text) * Convert.ToDecimal(InputBox.Text)),
                     CultureInfo.InvariantCulture);
         }
 
         private void button22_Click(object sender, EventArgs e)
         {
             
-            textBox1.Text = Convert.ToString(((Convert.ToDecimal(textBox1.Text) * Convert.ToDecimal(textBox1.Text) * Convert.ToDecimal(textBox1.Text))), CultureInfo.InvariantCulture);
+            InputBox.Text = Convert.ToString(((Convert.ToDecimal(InputBox.Text) * Convert.ToDecimal(InputBox.Text) * Convert.ToDecimal(InputBox.Text))), CultureInfo.InvariantCulture);
         }
 
         private void button23_Click(object sender, EventArgs e)
         {
-            memory = textBox1.Text;
+            memory = InputBox.Text;
             label1.Text = "M+";
         }
 
@@ -288,63 +288,63 @@ namespace Kalkulator
 
         private void button25_Click(object sender, EventArgs e)
         {
-            textBox1.Text = memory;
+            InputBox.Text = memory;
             label1.Text = "MR";
         }
 
         private void button26_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + "%";
+            InputBox.Text = InputBox.Text + "%";
         }
 
         private void button27_Click(object sender, EventArgs e)
         {
             //textBox1.Text = Convert.ToString(Math.Log10(Convert.ToDouble(textBox1.Text)));
-            textBox1.Text = textBox1.Text + "log";
+            InputBox.Text = InputBox.Text + "log";
         }
 
         private void button28_Click(object sender, EventArgs e)
         {
             //textBox1.Text += button28.Text;
             //label1.Text = "(";
-            textBox1.Text = textBox1.Text + '(';
+            InputBox.Text = InputBox.Text + '(';
         }
 
         private void button29_Click(object sender, EventArgs e)
         {
             //textBox1.Text += button29.Text;
             //label1.Text = ")";
-            textBox1.Text = textBox1.Text + ')';
+            InputBox.Text = InputBox.Text + ')';
         }
 
         private void button30_Click(object sender, EventArgs e)
         {
             //double pi = Math.PI;
             //textBox1.Text = Convert.ToString(pi);
-            textBox1.Text = textBox1.Text + "Pi";
+            InputBox.Text = InputBox.Text + "Pi";
         }
 
         private void button31_Click(object sender, EventArgs e)
         {
             //textBox1.Text = (Math.Sin(Convert.ToDouble(textBox1.Text))).ToString();
-            textBox1.Text = textBox1.Text + "sin";
+            InputBox.Text = InputBox.Text + "sin";
         }
 
         private void button34_Click(object sender, EventArgs e)
         {
-            textBox1.Text = ((1 / Convert.ToDouble(textBox1.Text))).ToString();
+            InputBox.Text = ((1 / Convert.ToDouble(InputBox.Text))).ToString();
         }
 
         private void button32_Click(object sender, EventArgs e)
         {
             //textBox1.Text = (Math.Cos(Convert.ToDouble(textBox1.Text))).ToString();
-            textBox1.Text = textBox1.Text + "cos";
+            InputBox.Text = InputBox.Text + "cos";
         }
 
         private void button33_Click(object sender, EventArgs e)
         {
             //textBox1.Text = (Math.Tan(Convert.ToDouble(textBox1.Text))).ToString();
-            textBox1.Text = textBox1.Text + "tan";
+            InputBox.Text = InputBox.Text + "tan";
         }
 
         private void button35_Click(object sender, EventArgs e)
@@ -356,21 +356,21 @@ namespace Kalkulator
             //num1 = float.Parse(textBox1.Text);
             //textBox1.Text = "";
             //button35.Enabled = true;
-            textBox1.Text = textBox1.Text + "^";
+            InputBox.Text = InputBox.Text + "^";
         }
 
         private void button36_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Length > 0)
+            if (InputBox.Text.Length > 0)
             {
-                textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1, 1);
+                InputBox.Text = InputBox.Text.Remove(InputBox.Text.Length - 1, 1);
             }
         }
 
         private void button37_Click(object sender, EventArgs e)
         {
             //textBox1.Text = (Math.Log(Convert.ToDouble(textBox1.Text))).ToString();
-            textBox1.Text = textBox1.Text + "ln";
+            InputBox.Text = InputBox.Text + "ln";
         }
 
         //private void button38_Click(object sender, EventArgs e)
@@ -383,42 +383,42 @@ namespace Kalkulator
         private void button38_Click_1(object sender, EventArgs e)
         {
             //textBox1.Text = (Math.Cosh(Convert.ToDouble(textBox1.Text))).ToString();
-            textBox1.Text = textBox1.Text + "cosh";
+            InputBox.Text = InputBox.Text + "cosh";
         }
 
         private void button39_Click(object sender, EventArgs e)
         {
             //textBox1.Text = (Math.Sinh(Convert.ToDouble(textBox1.Text))).ToString();
-            textBox1.Text = textBox1.Text + "sinh";
+            InputBox.Text = InputBox.Text + "sinh";
         }
 
         private void button40_Click(object sender, EventArgs e)
         {
             //textBox1.Text = (Math.Tanh(Convert.ToDouble(textBox1.Text))).ToString();
-            textBox1.Text = textBox1.Text + "tanh";
+            InputBox.Text = InputBox.Text + "tanh";
         }
 
         private void button41_Click(object sender, EventArgs e)
         {
-            textBox1.Text = (Math.Round(Convert.ToDouble(textBox1.Text))).ToString();
+            InputBox.Text = (Math.Round(Convert.ToDouble(InputBox.Text))).ToString();
         }
 
         private void button44_Click(object sender, EventArgs e)
         {
             //textBox1.Text = (Math.Asin(Convert.ToDouble(textBox1.Text))).ToString();
-            textBox1.Text = textBox1.Text + "asin";
+            InputBox.Text = InputBox.Text + "asin";
         }
 
         private void button45_Click(object sender, EventArgs e)
         {
             //textBox1.Text = (Math.Acos(Convert.ToDouble(textBox1.Text))).ToString();
-            textBox1.Text = textBox1.Text + "acos";
+            InputBox.Text = InputBox.Text + "acos";
         }
 
         private void button46_Click(object sender, EventArgs e)
         {
             //textBox1.Text = (Math.Atan(Convert.ToDouble(textBox1.Text))).ToString();
-            textBox1.Text = textBox1.Text + "atan";
+            InputBox.Text = InputBox.Text + "atan";
         }
 
         //private void button47_Click(object sender, EventArgs e)
@@ -434,48 +434,48 @@ namespace Kalkulator
         private void button49_Click(object sender, EventArgs e)
         {
             //textBox1.Text = (Math.Abs(Convert.ToDouble(textBox1.Text))).ToString();
-            textBox1.Text = textBox1.Text + "abs";
+            InputBox.Text = InputBox.Text + "abs";
         }
 
         private void button51_Click(object sender, EventArgs e)
         {
             //textBox1.Text = (Math.Exp(Convert.ToDouble(textBox1.Text))).ToString();
-            textBox1.Text = textBox1.Text + "exp";
+            InputBox.Text = InputBox.Text + "exp";
         }
 
         private void button50_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + "0.25";
+            InputBox.Text = InputBox.Text + "0.25";
         }
 
         private void button52_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + "0.5";
+            InputBox.Text = InputBox.Text + "0.5";
         }
 
         private void button54_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + "0.75";
+            InputBox.Text = InputBox.Text + "0.75";
         }
 
         private void button53_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + "0.000000000066742";
+            InputBox.Text = InputBox.Text + "0.000000000066742";
         }
 
         private void button55_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + "1.324717957244746";
+            InputBox.Text = InputBox.Text + "1.324717957244746";
         }
 
         private void button56_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + "2.7182818284590452";
+            InputBox.Text = InputBox.Text + "2.7182818284590452";
         }
 
         private void button57_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + "1.618033988749894";
+            InputBox.Text = InputBox.Text + "1.618033988749894";
         }
 
         private void button42_Click(object sender, EventArgs e)
@@ -504,17 +504,17 @@ namespace Kalkulator
 
         private void button48_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + "ceil";
+            InputBox.Text = InputBox.Text + "ceil";
         }
 
         private void button53_Click_1(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + "floor";
+            InputBox.Text = InputBox.Text + "floor";
         }
 
         private void button55_Click_1(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + "sign";
+            InputBox.Text = InputBox.Text + "sign";
         }
         
         private void button58_Click(object sender, EventArgs e)

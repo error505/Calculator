@@ -30,7 +30,7 @@
         {
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Kalkulator.SplashScreen1), true, true);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculator));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.InputBox = new System.Windows.Forms.TextBox();
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -99,15 +99,15 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Teal;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Info;
-            this.textBox1.Location = new System.Drawing.Point(5, 11);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(282, 58);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.InputBox.BackColor = System.Drawing.Color.Teal;
+            this.InputBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.InputBox.ForeColor = System.Drawing.SystemColors.Info;
+            this.InputBox.Location = new System.Drawing.Point(5, 11);
+            this.InputBox.Multiline = true;
+            this.InputBox.Name = "InputBox";
+            this.InputBox.Size = new System.Drawing.Size(282, 58);
+            this.InputBox.TabIndex = 0;
+            this.InputBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // button17
             // 
@@ -154,12 +154,12 @@
             this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button19.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button19.Location = new System.Drawing.Point(94, 211);
-            this.button19.Name = "button19";
+            this.button19.Name = "RootNumber";
             this.button19.Size = new System.Drawing.Size(51, 27);
             this.button19.TabIndex = 20;
             this.button19.Text = "√{x}";
             this.button19.UseVisualStyleBackColor = false;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
+            this.button19.Click += new System.EventHandler(this.RootNumber);
             // 
             // button21
             // 
@@ -1062,7 +1062,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.InputBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -1133,7 +1133,7 @@
         private System.Windows.Forms.Button button56;
         private System.Windows.Forms.Button button57;
         private System.Windows.Forms.Button button42;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox InputBox;
         private System.Windows.Forms.Button button43;
         private System.Windows.Forms.Button button47;
         private System.Windows.Forms.Button button48;

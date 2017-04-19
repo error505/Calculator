@@ -33,7 +33,7 @@ namespace Kalkulator
 
         private void konv_Load(object sender, EventArgs e)
         {
-            textBox1.Text = ((Calculator)frm1).textBox1.Text;
+            textBox1.Text = ((Calculator)frm1).InputBox.Text;
         }
 
         private void button2_Click(object sender, EventArgs e)
