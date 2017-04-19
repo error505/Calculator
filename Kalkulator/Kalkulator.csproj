@@ -67,6 +67,10 @@
     <ApplicationIcon>1376930060_171414.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Data.v13.1, Version=13.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DevExpressMvvm.16.1.4.0\lib\net40-client\DevExpress.Data.v13.1.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Mvvm, Version=16.1.0.0, Culture=neutral, PublicKeyToken=382ad28f6ae31f30, processorArchitecture=MSIL">
       <HintPath>..\packages\DevExpressMvvm.16.1.4.0\lib\net40-client\DevExpress.Mvvm.dll</HintPath>
       <Private>True</Private>

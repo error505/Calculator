@@ -1,4 +1,6 @@
-﻿namespace Kalkulator
+﻿using System;
+
+namespace Kalkulator
 {
     partial class SplashScreen1
     {
@@ -55,7 +57,8 @@
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(152, 13);
             this.labelControl1.TabIndex = 6;
-            this.labelControl1.Text = "Copyright © 2013 Iric Software";
+            var date = DateTime.Now;
+            this.labelControl1.Text = "Copyright © " + date.Year + " Iric Software";
             // 
             // labelControl2
             // 
